@@ -1,0 +1,91 @@
+{
+  "id": "numbers",
+  "type": "SharedSlice",
+  "name": "Numbers",
+  "description": "Numbers",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "theme",
+            "placeholder": "",
+            "options": [
+              "orange",
+              "red",
+              "blue"
+            ],
+            "default_value": "orange"
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "number": {
+          "type": "Number",
+          "config": {
+            "label": "number",
+            "placeholder": ""
+          }
+        },
+        "prefix": {
+          "type": "Text",
+          "config": {
+            "label": "prefix",
+            "placeholder": ""
+          }
+        },
+        "suffix": {
+          "type": "Text",
+          "config": {
+            "label": "suffix",
+            "placeholder": ""
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "label",
+            "placeholder": ""
+          }
+        },
+        "top_label": {
+          "type": "Text",
+          "config": {
+            "label": "top label",
+            "placeholder": ""
+          }
+        },
+        "popup_image": {
+          "type": "Image",
+          "config": {
+            "label": "popup image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

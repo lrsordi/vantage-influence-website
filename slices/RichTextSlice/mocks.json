@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat sint culpa occaecat ullamco nostrud aute."
+						}
+					}
+				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "orange",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

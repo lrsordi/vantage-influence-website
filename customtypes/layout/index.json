@@ -1,0 +1,188 @@
+{
+  "format": "page",
+  "id": "layout",
+  "label": "Layout",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "share_image": {
+        "type": "Image",
+        "config": {
+          "label": "share image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "seo_keywords": {
+        "type": "Text",
+        "config": {
+          "label": "seo keywords",
+          "placeholder": ""
+        }
+      },
+      "hero_headline": {
+        "type": "Text",
+        "config": {
+          "label": "Hero Headline",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "Header": {
+      "links": {
+        "type": "Group",
+        "config": {
+          "label": "Links",
+          "repeat": true,
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Footer": {
+      "privacy_policy": {
+        "type": "Link",
+        "config": {
+          "label": "privacy policy",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "terms_of_use": {
+        "type": "Link",
+        "config": {
+          "label": "terms of use",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "social_links": {
+        "type": "Group",
+        "config": {
+          "label": "social links",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "contact_email": {
+        "type": "Text",
+        "config": {
+          "label": "contact email",
+          "placeholder": ""
+        }
+      },
+      "awards": {
+        "type": "Group",
+        "config": {
+          "label": "awards",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "copyright": {
+        "type": "Text",
+        "config": {
+          "label": "copyright",
+          "placeholder": ""
+        }
+      }
+    },
+    "Locations": {
+      "locations": {
+        "type": "Group",
+        "config": {
+          "label": "locations",
+          "repeat": true,
+          "fields": {
+            "city": {
+              "type": "Text",
+              "config": {
+                "label": "city",
+                "placeholder": ""
+              }
+            },
+            "top": {
+              "type": "Number",
+              "config": {
+                "label": "top",
+                "placeholder": ""
+              }
+            },
+            "left": {
+              "type": "Number",
+              "config": {
+                "label": "left",
+                "placeholder": ""
+              }
+            },
+            "address": {
+              "type": "Text",
+              "config": {
+                "label": "Address",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

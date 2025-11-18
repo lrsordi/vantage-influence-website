@@ -1,0 +1,37 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laboris ea sint ea nisi ad voluptate. Dolor ut velit culpa ut veniam sunt anim. Officia ipsum cillum do veniam velit sunt sint officia labore."
+						}
+					}
+				]
+			},
+			"link_label": {
+				"__TYPE__": "FieldContent",
+				"value": "particles",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "orange",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

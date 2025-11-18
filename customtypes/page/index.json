@@ -1,0 +1,112 @@
+{
+  "format": "page",
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "header_background": {
+        "type": "Image",
+        "config": {
+          "label": "header background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "background": {
+        "type": "Select",
+        "config": {
+          "label": "background",
+          "placeholder": "",
+          "options": ["white", "gradient", "gradient-dark"],
+          "default_value": "white"
+        }
+      },
+      "dark_header": {
+        "type": "Boolean",
+        "config": {
+          "label": "dark_header",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "testimonial": {
+              "type": "SharedSlice"
+            },
+            "rich_text_slice": {
+              "type": "SharedSlice"
+            },
+            "news": {
+              "type": "SharedSlice"
+            },
+            "join_us": {
+              "type": "SharedSlice"
+            },
+            "contact": {
+              "type": "SharedSlice"
+            },
+            "clients": {
+              "type": "SharedSlice"
+            },
+            "areas": {
+              "type": "SharedSlice"
+            },
+            "case_studies": {
+              "type": "SharedSlice"
+            },
+            "team": {
+              "type": "SharedSlice"
+            },
+            "symbol": {
+              "type": "SharedSlice"
+            },
+            "about_text": {
+              "type": "SharedSlice"
+            },
+            "text_intro": {
+              "type": "SharedSlice"
+            },
+            "map": {
+              "type": "SharedSlice"
+            },
+            "divisions": {
+              "type": "SharedSlice"
+            },
+            "numbers": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

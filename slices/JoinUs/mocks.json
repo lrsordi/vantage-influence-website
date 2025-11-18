@@ -1,0 +1,80 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "than",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum adipisicing est officia tempor velit sunt qui duis irure anim Lorem adipisicing consequat consectetur."
+						}
+					}
+				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "orange",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"position",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "earth",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Irure nulla do non do consequat Lorem qui reprehenderit consectetur incididunt nulla. Laboris aliquip pariatur incididunt duis elit ad adipisicing ut deserunt fugiat quis ad. Consectetur ea aliquip aute occaecat ad."
+									}
+								}
+							]
+						}
+					],
+					[
+						"theme",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "orange",
+							"type": "Select"
+						}
+					],
+					[
+						"field_osint_example",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
+					],
+					[
+						"field_investigation_industry",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
+					]
+				]
+			}
+		]
+	}
+]

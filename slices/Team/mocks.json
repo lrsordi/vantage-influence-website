@@ -1,0 +1,81 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "orange",
+				"type": "Select"
+			},
+			"background": {
+				"__TYPE__": "FieldContent",
+				"value": "none",
+				"type": "Select"
+			},
+			"border_bottom": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"category",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "according",
+							"type": "Text"
+						}
+					],
+					[
+						"name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "real",
+							"type": "Text"
+						}
+					],
+					[
+						"email",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "use",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Qui dolore pariatur incididunt esse deserunt ipsum aliqua Lorem. Occaecat reprehenderit consectetur fugiat magna velit laboris cillum nostrud dolore cupidatat."
+									}
+								}
+							]
+						}
+					],
+					[
+						"position",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Est est excepteur sunt ullamco labore aute pariatur. Nisi velit dolor officia sint magna sunt cupidatat id amet excepteur duis magna anim."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

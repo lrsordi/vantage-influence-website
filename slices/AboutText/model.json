@@ -1,0 +1,57 @@
+{
+  "id": "about_text",
+  "type": "SharedSlice",
+  "name": "AboutText",
+  "description": "AboutText",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "image_title": {
+          "type": "Image",
+          "config": {
+            "label": "image title",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "theme",
+            "placeholder": "",
+            "options": [
+              "orange",
+              "red",
+              "blue"
+            ],
+            "default_value": "orange"
+          }
+        }
+      },
+      "items": {
+        "paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "label": "paragraph",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,image,list-item,o-list-item"
+          }
+        }
+      }
+    }
+  ]
+}

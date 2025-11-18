@@ -1,0 +1,47 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "held",
+				"type": "Text"
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "blue",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"testimonial",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Non ex do commodo incididunt non non non eiusmod enim. Occaecat minim dolore sunt aliquip quis laboris mollit."
+									}
+								}
+							]
+						}
+					],
+					[
+						"author",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "electricity",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

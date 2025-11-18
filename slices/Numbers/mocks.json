@@ -1,0 +1,115 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "or",
+				"type": "Text"
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "orange",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+								"width": 4160,
+								"height": 3120
+							},
+							"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+							"width": 4160,
+							"height": 3120,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"number",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "46",
+							"type": "Number"
+						}
+					],
+					[
+						"prefix",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "hollow",
+							"type": "Text"
+						}
+					],
+					[
+						"suffix",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "dead",
+							"type": "Text"
+						}
+					],
+					[
+						"label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "only",
+							"type": "Text"
+						}
+					],
+					[
+						"top_label",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "eat",
+							"type": "Text"
+						}
+					],
+					[
+						"popup_image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+								"width": 3277,
+								"height": 4092
+							},
+							"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+							"width": 3277,
+							"height": 4092,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	}
+]
