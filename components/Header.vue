@@ -34,6 +34,7 @@
         <div
           class="headline"
           ref="headlineEl"
+          v-if="layoutData.hero_headline"
           v-html="layoutData.hero_headline.replace(/\n/g, '<br />')"
         ></div>
         <div class="headline-arrow" ref="headlineArrowEl"></div>
