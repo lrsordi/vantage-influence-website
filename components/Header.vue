@@ -73,7 +73,7 @@
 <script setup lang="ts">
 import { usePageStore } from "../stores/page";
 import { gsap } from "gsap";
-import Logo from "@/assets/svg/logo.svg?component";
+import Logo from "@/assets/svg/influence.svg?component";
 import MiniLogo from "@/assets/svg/mini-logo.svg?skipsvgo";
 import type { NuxtLink } from "#build/components";
 
@@ -660,7 +660,7 @@ onMounted(() => {
       left: 50%;
       transform: translateX(-50%);
       width: 2px;
-      background: $orange;
+      background: $red;
       top: calc(100% + 8rem);
       height: 50vh;
     }
