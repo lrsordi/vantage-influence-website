@@ -104,7 +104,7 @@
 </template>
 
 <script setup lang="ts">
-import Logo from "@/assets/svg/logo.svg?component";
+import Logo from "@/assets/svg/influence.svg?component";
 import { usePageStore } from "../stores/page";
 import { validateForm } from "../util/form";
 
