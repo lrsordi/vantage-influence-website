@@ -23,6 +23,22 @@
               "blue"
             ]
           }
+        },
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": ""
+          }
+        },
+        "bottom_line": {
+          "type": "Boolean",
+          "config": {
+            "label": "bottom line",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       },
       "items": {

@@ -7,6 +7,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "red",
 				"type": "Select"
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "biggest",
+				"type": "Text"
+			},
+			"bottom_line": {
+				"__TYPE__": "BooleanContent",
+				"value": true
 			}
 		},
 		"items": [
