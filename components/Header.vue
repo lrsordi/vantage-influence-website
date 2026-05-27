@@ -546,9 +546,9 @@ onMounted(() => {
     .headline {
       color: #1d1d1b !important;
     }
-    svg path {
+    /* svg path {
       fill: #1d1d1b !important;
-    }
+    } */
   }
 
   &:before {
@@ -614,7 +614,7 @@ onMounted(() => {
       position: relative;
       margin: 0 auto;
       path {
-        fill: #fff;
+        //fill: #fff;
         transition: fill 0.3s linear;
       }
     }

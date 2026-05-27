@@ -117,7 +117,6 @@ const toggle = (index: number) => {
 <style lang="scss">
 .case-studies {
   $padding-top: 10rem;
-  background: #fff;
 
   .title {
     padding-top: $padding-top;
