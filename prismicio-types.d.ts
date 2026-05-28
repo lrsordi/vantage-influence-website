@@ -274,6 +274,7 @@ export type LayoutDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | FounderSlice
   | TestimonialSlice
   | RichTextSliceSlice
   | NewsSlice
@@ -1152,6 +1153,16 @@ export interface NewsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   theme: prismic.SelectField<"orange" | "red" | "blue">;
+
+  /**
+   * Master Section Title field in *News → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.primary.master_section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  master_section_title: prismic.KeyTextField;
 
   /**
    * Section Title field in *News → Primary*

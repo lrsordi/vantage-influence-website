@@ -24,6 +24,13 @@
             ]
           }
         },
+        "master_section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Master Section Title",
+            "placeholder": ""
+          }
+        },
         "section_title": {
           "type": "Text",
           "config": {

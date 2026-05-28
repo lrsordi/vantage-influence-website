@@ -16,6 +16,11 @@
 			"bottom_line": {
 				"__TYPE__": "BooleanContent",
 				"value": true
+			},
+			"master_section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "indeed",
+				"type": "Text"
 			}
 		},
 		"items": [

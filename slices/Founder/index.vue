@@ -29,16 +29,25 @@ defineProps(
             <PrismicImage :field="slice.primary.image" />
           </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6 info-col">
+          <div class="vertical-line red"></div>
           <div class="founder-info">
-            <p v-if="slice.primary.name" class="founder-name">{{ slice.primary.name }}</p>
-            <p v-if="slice.primary.role" class="founder-role">{{ slice.primary.role }}</p>
+            <p v-if="slice.primary.name" class="founder-name">
+              {{ slice.primary.name }}
+            </p>
+            <p v-if="slice.primary.role" class="founder-role">
+              {{ slice.primary.role }}
+            </p>
+            <a
+              v-if="slice.primary.email"
+              :href="`mailto:${slice.primary.email}`"
+              class="founder-email"
+            >
+              {{ slice.primary.email }}
+            </a>
             <div v-if="slice.primary.text" class="founder-text rich-text">
               <PrismicRichText :field="slice.primary.text" />
             </div>
-            <a v-if="slice.primary.email" :href="`mailto:${slice.primary.email}`" class="founder-email">
-              {{ slice.primary.email }}
-            </a>
           </div>
         </div>
       </div>
@@ -48,12 +57,13 @@ defineProps(
 
 <style lang="scss">
 .founder {
-  padding-top: 10rem;
+  padding-top: 14rem;
   padding-bottom: 10rem;
 
   .section-title {
     @include slice-title;
     margin-bottom: 6rem;
+    text-align: center;
   }
 
   .founder-image {
@@ -68,40 +78,51 @@ defineProps(
     padding-left: 4rem;
 
     .founder-name {
-      font-family: $primary-font;
-      font-size: 2.5rem;
-      font-weight: 300;
+      font-family: $secondary-font;
+      font-size: 2.9rem;
+      font-weight: 500;
       margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: $red;
     }
 
     .founder-role {
       font-family: $secondary-font;
-      font-size: 1.4rem;
-      font-weight: 400;
+      font-size: 1.9rem;
+      font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 3rem;
+      color: $red;
+      margin-bottom: 1rem;
     }
 
     .founder-text {
       font-family: $secondary-font;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: 300;
       line-height: 1.6;
+      margin-top: 3rem;
       margin-bottom: 3rem;
     }
 
     .founder-email {
       font-family: $secondary-font;
-      font-size: 1.4rem;
-      font-weight: 400;
+      font-size: 2rem;
+      font-weight: 300;
       text-decoration: none;
       color: inherit;
-      border-bottom: 1px solid currentColor;
 
       &:hover {
         opacity: 0.7;
       }
+    }
+  }
+
+  .info-col {
+    position: relative;
+
+    .vertical-line {
+      left: 2rem;
     }
   }
 }
