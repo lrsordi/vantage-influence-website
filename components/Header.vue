@@ -20,6 +20,7 @@
               <li
                 v-for="(menu, index) in headerLinks"
                 :key="`menu-item-${index}`"
+                :class="{ 'btn-item': menu.button }"
               >
                 <PrismicLink :field="menu.link">
                   {{ menu.label }}
@@ -716,6 +717,7 @@ onMounted(() => {
       padding: 0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-grow: 1;
       visibility: hidden;
 
@@ -762,6 +764,33 @@ onMounted(() => {
 
           &.router-link-active {
             pointer-events: none;
+          }
+        }
+
+        &.btn-item {
+          a {
+            display: inline-block;
+            padding: 0.8rem 2.4rem;
+            background: linear-gradient(
+              93.96deg,
+              #eb2426 3.37%,
+              #851416 107.34%
+            );
+            border: 1px solid #eb2426;
+            color: $white !important;
+            letter-spacing: 0.1em;
+
+            &:after {
+              display: none;
+            }
+
+            &:hover {
+              opacity: 0.88;
+            }
+
+            &.router-link-active {
+              pointer-events: auto;
+            }
           }
         }
       }
