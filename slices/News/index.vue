@@ -12,7 +12,7 @@ defineProps(
     "index",
     "slices",
     "context",
-  ])
+  ]),
 );
 
 const imageEl = ref<HTMLImageElement>();
@@ -29,6 +29,13 @@ const rootEl = ref<HTMLDivElement>();
     ref="rootEl"
   >
     <div class="container">
+      <h2
+        v-if="slice.primary.master_section_title"
+        class="master-section-title"
+      >
+        {{ slice.primary.master_section_title }}
+      </h2>
+
       <h2 v-if="slice.primary.section_title" class="section-title">
         {{ slice.primary.section_title }}
       </h2>
@@ -51,6 +58,13 @@ const rootEl = ref<HTMLDivElement>();
 .news {
   padding-top: 6rem;
   margin-top: 10rem;
+
+  .master-section-title {
+    @include slice-title;
+    margin-top: 0;
+    margin-bottom: 8rem;
+    text-align: center;
+  }
 
   .section-title {
     font-family: $secondary-font;

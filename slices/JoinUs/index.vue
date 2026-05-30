@@ -11,7 +11,7 @@ defineProps(
     "index",
     "slices",
     "context",
-  ])
+  ]),
 );
 
 const activeApp = ref([]);
@@ -55,6 +55,9 @@ const toggle = (index: number) => {
     :data-slice-variation="slice.variation"
   >
     <div class="container">
+      <h2 v-if="slice.primary.section_title" class="section-title">
+        {{ slice.primary.section_title }}
+      </h2>
       <div class="row">
         <div
           class="offset-1 offset-md-2 col-11 col-md-9"
@@ -125,6 +128,12 @@ const toggle = (index: number) => {
         left: -9rem;
       }
     }
+  }
+
+  .section-title {
+    @include slice-title;
+    margin-top: 8rem;
+    text-align: center;
   }
 
   .title {
