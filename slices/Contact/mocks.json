@@ -18,6 +18,11 @@
 						}
 					}
 				]
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "world",
+				"type": "Text"
 			}
 		},
 		"items": []

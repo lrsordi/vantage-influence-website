@@ -29,6 +29,17 @@ export interface LayoutDocumentDataLinksItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * button field in *Layout → Links*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: layout.links[].button
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  button: prismic.BooleanField;
 }
 
 /**
@@ -710,6 +721,16 @@ export type ClientsSlice = prismic.SharedSlice<
  */
 export interface ContactSliceDefaultPrimary {
   /**
+   * Section Title field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
    * Title field in *Contact → Primary*
    *
    * - **Field Type**: Text
@@ -971,6 +992,16 @@ export type FounderSlice = prismic.SharedSlice<
  * Primary content in *JoinUs → Primary*
  */
 export interface JoinUsSliceDefaultPrimary {
+  /**
+   * Section Title field in *JoinUs → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: join_us.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
   /**
    * Title field in *JoinUs → Primary*
    *
