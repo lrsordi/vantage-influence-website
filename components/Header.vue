@@ -9,7 +9,11 @@
       <div class="row">
         <div class="offset-lg-1 col-lg-10 col-links">
           <nav class="menu">
-            <NuxtLink to="/" class="mini-logo" ref="miniLogoEl"
+            <NuxtLink
+              to="/"
+              class="mini-logo"
+              ref="miniLogoEl"
+              :class="{ dark: pageData.dark_header }"
               >Mini Logo<MiniLogo
             /></NuxtLink>
             <ul>
@@ -123,7 +127,7 @@ const animateIn = () => {
       paddingBottom: isHomePage ? 120 : 0,
       ease: "power3.inOut",
       duration: 1,
-    }
+    },
   );
 
   let logoHeight = isHomePage ? "180px" : "90px";
@@ -182,8 +186,8 @@ const startScroll = () => {
             ? window.innerHeight * EXPANDED_SIZE - finRetractedSize
             : MIN_SIZE - finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   scrollAnimations.push(
@@ -200,8 +204,8 @@ const startScroll = () => {
           start: 0,
           end: window.innerHeight * EXPANDED_SIZE * 0.3 + finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   scrollAnimations.push(
@@ -218,8 +222,8 @@ const startScroll = () => {
           start: 0,
           end: window.innerHeight * EXPANDED_SIZE * 0.3 + finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   let logoHeight = isHomePage ? "180px" : "90px";
@@ -239,8 +243,8 @@ const startScroll = () => {
           start: 0,
           end: window.innerHeight * EXPANDED_SIZE + finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   scrollAnimations.push(
@@ -256,8 +260,8 @@ const startScroll = () => {
             ? window.innerHeight * EXPANDED_SIZE - finRetractedSize
             : MIN_SIZE - finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 };
 
@@ -322,7 +326,7 @@ watch(
     }
 
     toggleMiniLogo();
-  }
+  },
 );
 
 onMounted(() => {
@@ -368,7 +372,7 @@ onMounted(() => {
       ease: "power3.inOut",
       duration: 1,
       delay: 0.8,
-    }
+    },
   );
 
   if (!isHomePage) {
@@ -498,7 +502,7 @@ onMounted(() => {
           content: "";
           width: 100%;
           height: 2px;
-          background: $orange;
+          background: $red;
           position: absolute;
           bottom: -0.6rem;
           left: 0;
@@ -686,6 +690,15 @@ onMounted(() => {
         height: 40px;
         top: 5px;
         position: absolute;
+        path {
+          fill: #fff !important;
+        }
+      }
+
+      &.dark {
+        svg path {
+          fill: #1d1d1b !important;
+        }
       }
 
       @include media-breakpoint-up(md) {
@@ -730,7 +743,7 @@ onMounted(() => {
             content: "";
             width: 100%;
             height: 2px;
-            background: $orange;
+            background: $red;
             position: absolute;
             bottom: -0.6rem;
             left: 0;
@@ -794,7 +807,7 @@ onMounted(() => {
 
   &.dark {
     span {
-      background: $orange;
+      background: $red;
     }
   }
 
