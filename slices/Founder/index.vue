@@ -24,12 +24,12 @@ defineProps(
         {{ slice.primary.section_title }}
       </h2>
       <div class="row align-items-center">
-        <div class="col-md-5">
+        <div class="offset-lg-1 offset-xxl-0 col-md-5">
           <div class="founder-image">
             <PrismicImage :field="slice.primary.image" />
           </div>
         </div>
-        <div class="col-md-6 info-col">
+        <div class="col-md-6 col-lg-5 col-xxl-6 info-col">
           <div class="vertical-line red"></div>
           <div class="founder-info">
             <p v-if="slice.primary.name" class="founder-name">
@@ -57,8 +57,12 @@ defineProps(
 
 <style lang="scss">
 .founder {
-  padding-top: 14rem;
+  padding-top: 8rem;
   padding-bottom: 10rem;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 14rem;
+  }
 
   .section-title {
     @include slice-title;
@@ -67,15 +71,27 @@ defineProps(
   }
 
   .founder-image {
+    text-align: center;
+
     img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      width: 90%;
+      object-position: top center;
+
+      @include media-breakpoint-up(lg) {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
     }
   }
 
   .founder-info {
+    margin-top: 3rem;
     padding-left: 4rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
 
     .founder-name {
       font-family: $secondary-font;
@@ -103,6 +119,11 @@ defineProps(
       line-height: 1.6;
       margin-top: 3rem;
       margin-bottom: 3rem;
+      padding-right: 1rem;
+
+      @include media-breakpoint-up(md) {
+        padding-right: 0;
+      }
     }
 
     .founder-email {

@@ -675,7 +675,7 @@ onMounted(() => {
     align-items: center;
     height: 60px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xxl) {
       height: 80px;
       position: relative;
       display: flex;
