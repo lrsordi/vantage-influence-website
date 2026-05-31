@@ -12,7 +12,7 @@ defineProps(
     "index",
     "slices",
     "context",
-  ])
+  ]),
 );
 
 const pageStore = usePageStore();
@@ -72,8 +72,11 @@ const isValid = () => {
     :data-slice-variation="slice.variation"
   >
     <div class="container">
+      <h2 v-if="slice.primary.section_title" class="section-title">
+        {{ slice.primary.section_title }}
+      </h2>
       <div class="row">
-        <div class="col-md-6">
+        <div class="offset-xl-1 offset-xxl-0 col-md-6 col-xl-5 col-xxl-6">
           <h2 class="title">{{ slice.primary.title }}</h2>
           <div class="text-container rich-text">
             <PrismicRichText :field="slice.primary.text" />
@@ -94,7 +97,7 @@ const isValid = () => {
           </ul>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-xl-5 col-xxl-6">
           <form class="form" @submit.prevent="submit()">
             <div class="input-group">
               <label>NAME</label>
@@ -140,8 +143,23 @@ const isValid = () => {
 
 <style lang="scss">
 .contact-slice {
-  padding-top: 19rem;
+  padding-top: 10rem;
   padding-bottom: 5rem;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  .section-title {
+    @include slice-title;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 8rem;
+    }
+  }
 
   .title {
     font-family: $primary-font;
