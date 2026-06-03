@@ -151,6 +151,11 @@ const isValid = () => {
     padding-bottom: 5rem;
   }
 
+  @include media-breakpoint-up(xl) {
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+  }
+
   .section-title {
     @include slice-title;
     margin-bottom: 5rem;
