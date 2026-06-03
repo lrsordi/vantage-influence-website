@@ -16,7 +16,7 @@
               :class="{ dark: pageData.dark_header }"
               >Mini Logo<MiniLogo
             /></NuxtLink>
-            <ul>
+            <ul v-if="showNavLinks">
               <li
                 v-for="(menu, index) in headerLinks"
                 :key="`menu-item-${index}`"
@@ -53,7 +53,7 @@
   >
     <div class="layer"></div>
     <NuxtLink to="/" class="mini-logo">Mini Logo<MiniLogo /></NuxtLink>
-    <ul>
+    <ul v-if="showNavLinks">
       <li v-for="(menu, index) in headerLinks" :key="`menu-item-${index}`">
         <PrismicLink :field="menu.link">
           {{ menu.label }}
@@ -102,6 +102,7 @@ const menuOpened = ref<boolean>(false);
 const route = useRoute();
 let isHomePage = route.fullPath === "/";
 const headerLinks = computed(() => pageStore.layoutData?.links);
+const { public: { showNavLinks } } = useRuntimeConfig();
 
 let ctx = gsap.context(() => {});
 let scrollAnimations: gsap.core.Tween[] = [];
