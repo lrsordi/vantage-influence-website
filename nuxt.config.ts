@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      showNavLinks: false,
+      showNavLinks: true,
     },
   },
 
