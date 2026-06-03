@@ -28,6 +28,12 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    public: {
+      showNavLinks: false,
+    },
+  },
+
   build: { transpile: ["vue-toastification"] },
 
   app: {
