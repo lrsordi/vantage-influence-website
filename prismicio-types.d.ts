@@ -29,6 +29,17 @@ export interface LayoutDocumentDataLinksItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * button field in *Layout → Links*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: layout.links[].button
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  button: prismic.BooleanField;
 }
 
 /**
@@ -274,6 +285,8 @@ export type LayoutDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | FounderSlice
+  | TestimonialSlice
   | RichTextSliceSlice
   | NewsSlice
   | JoinUsSlice
@@ -708,6 +721,16 @@ export type ClientsSlice = prismic.SharedSlice<
  */
 export interface ContactSliceDefaultPrimary {
   /**
+   * Section Title field in *Contact → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
    * Title field in *Contact → Primary*
    *
    * - **Field Type**: Text
@@ -871,9 +894,114 @@ export type DivisionsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Founder → Primary*
+ */
+export interface FounderSliceDefaultPrimary {
+  /**
+   * image field in *Founder → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Section Title field in *Founder → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
+   * Name field in *Founder → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Role field in *Founder → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder.primary.role
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  role: prismic.KeyTextField;
+
+  /**
+   * email field in *Founder → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * text field in *Founder → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Founder Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FounderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FounderSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Founder*
+ */
+type FounderSliceVariation = FounderSliceDefault;
+
+/**
+ * Founder Shared Slice
+ *
+ * - **API ID**: `founder`
+ * - **Description**: Founder
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FounderSlice = prismic.SharedSlice<
+  "founder",
+  FounderSliceVariation
+>;
+
+/**
  * Primary content in *JoinUs → Primary*
  */
 export interface JoinUsSliceDefaultPrimary {
+  /**
+   * Section Title field in *JoinUs → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: join_us.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
   /**
    * Title field in *JoinUs → Primary*
    *
@@ -1056,6 +1184,37 @@ export interface NewsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   theme: prismic.SelectField<"orange" | "red" | "blue">;
+
+  /**
+   * Master Section Title field in *News → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.primary.master_section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  master_section_title: prismic.KeyTextField;
+
+  /**
+   * Section Title field in *News → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
+   * bottom line field in *News → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: news.primary.bottom_line
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  bottom_line: prismic.BooleanField;
 }
 
 /**
@@ -1520,6 +1679,87 @@ type TeamSliceVariation = TeamSliceDefault;
 export type TeamSlice = prismic.SharedSlice<"team", TeamSliceVariation>;
 
 /**
+ * Primary content in *Testimonial → Primary*
+ */
+export interface TestimonialSliceDefaultPrimary {
+  /**
+   * title field in *Testimonial → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * theme field in *Testimonial → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: orange
+   * - **API ID Path**: testimonial.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"orange" | "red" | "blue", "filled">;
+}
+
+/**
+ * Primary content in *Testimonial → Items*
+ */
+export interface TestimonialSliceDefaultItem {
+  /**
+   * testimonial field in *Testimonial → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].testimonial
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  testimonial: prismic.RichTextField;
+
+  /**
+   * author field in *Testimonial → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].author
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Testimonial Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialSliceDefaultPrimary>,
+  Simplify<TestimonialSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Testimonial*
+ */
+type TestimonialSliceVariation = TestimonialSliceDefault;
+
+/**
+ * Testimonial Shared Slice
+ *
+ * - **API ID**: `testimonial`
+ * - **Description**: Testimonial
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialSlice = prismic.SharedSlice<
+  "testimonial",
+  TestimonialSliceVariation
+>;
+
+/**
  * Primary content in *TextIntro → Primary*
  */
 export interface TextIntroSliceDefaultPrimary {
@@ -1644,6 +1884,10 @@ declare module "@prismicio/client" {
       DivisionsSliceDefaultItem,
       DivisionsSliceVariation,
       DivisionsSliceDefault,
+      FounderSlice,
+      FounderSliceDefaultPrimary,
+      FounderSliceVariation,
+      FounderSliceDefault,
       JoinUsSlice,
       JoinUsSliceDefaultPrimary,
       JoinUsSliceDefaultItem,
@@ -1676,6 +1920,11 @@ declare module "@prismicio/client" {
       TeamSliceDefaultItem,
       TeamSliceVariation,
       TeamSliceDefault,
+      TestimonialSlice,
+      TestimonialSliceDefaultPrimary,
+      TestimonialSliceDefaultItem,
+      TestimonialSliceVariation,
+      TestimonialSliceDefault,
       TextIntroSlice,
       TextIntroSliceDefaultPrimary,
       TextIntroSliceVariation,

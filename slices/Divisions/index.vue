@@ -13,7 +13,7 @@ const props = defineProps(
     "index",
     "slices",
     "context",
-  ])
+  ]),
 );
 
 const activeIndex = ref(0);
@@ -174,22 +174,13 @@ const setActiveIndex = (index: number) => {
 .divisions {
   position: relative;
   background: #ecf1f3bf;
-  padding: 10rem 0;
-
-  @include media-breakpoint-up(md) {
-    padding: 0;
-  }
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 
   h2 {
     @include slice-title;
     text-align: center;
-
-    @include media-breakpoint-up(md) {
-      position: absolute;
-      top: 9rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    margin-bottom: 5rem;
   }
 
   .grid {
@@ -199,8 +190,13 @@ const setActiveIndex = (index: number) => {
     padding-top: 10rem;
 
     @include media-breakpoint-up(md) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
       padding-top: 0;
+
+      &:has(.grid-item:nth-child(3)) {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .grid-item {
@@ -214,16 +210,14 @@ const setActiveIndex = (index: number) => {
       min-height: 30rem;
 
       @include media-breakpoint-up(md) {
-        padding-top: 20rem;
-        padding-bottom: 20rem;
         grid-row-start: auto;
         grid-column-start: auto;
         min-height: auto;
       }
 
       @include media-breakpoint-up(lg) {
-        padding-top: 24rem;
-        padding-bottom: 25rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
       }
 
       img {
@@ -279,10 +273,8 @@ const setActiveIndex = (index: number) => {
           }
         }
 
-        &:nth-child(3) {
-          .rectangle {
-            display: none !important;
-          }
+        .rectangle {
+          display: none !important;
         }
       }
     }

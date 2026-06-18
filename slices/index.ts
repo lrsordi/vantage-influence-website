@@ -10,6 +10,7 @@ export const components = defineSliceZoneComponents({
   clients: defineAsyncComponent(() => import("./Clients/index.vue")),
   contact: defineAsyncComponent(() => import("./Contact/index.vue")),
   divisions: defineAsyncComponent(() => import("./Divisions/index.vue")),
+  founder: defineAsyncComponent(() => import("./Founder/index.vue")),
   join_us: defineAsyncComponent(() => import("./JoinUs/index.vue")),
   map: defineAsyncComponent(() => import("./Map/index.vue")),
   news: defineAsyncComponent(() => import("./News/index.vue")),

@@ -1,5 +1,5 @@
 <template>
-  <NuxtLoadingIndicator color="#ec6a06" />
+  <NuxtLoadingIndicator color="#eb2426" />
   <Header />
   <div
     id="smooth-content"
@@ -76,14 +76,14 @@ watch(pageData, () => {
 });
 
 const { data: layoutData } = await useAsyncData("layout", () =>
-  prismic.client.getSingle("layout")
+  prismic.client.getSingle("layout"),
 );
 
 // extra call for hydration issues
 const { data: page } = await useAsyncData(route.params.uid as string, () => {
   return prismic.client.getByUID(
     "page",
-    (route.params.uid as string) || ("home" as string)
+    (route.params.uid as string) || ("home" as string),
   );
 });
 
@@ -174,7 +174,7 @@ const animateIn = () => {
         scrollSmoother?.refresh();
         ScrollTrigger?.refresh();
       },
-    }
+    },
   );
 };
 

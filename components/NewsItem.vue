@@ -72,7 +72,21 @@ onMounted(() => {
       </div>
     </div>
     <div class="col-md-6">
-      <div class="info" ref="contentElm" :style="{ height: textHeight }">
+      <div
+        class="info"
+        ref="contentElm"
+        :style="{
+          height: textHeight,
+          maskImage:
+            openedHeight > 0 && !opened
+              ? 'linear-gradient(to bottom, black 75%, transparent 100%)'
+              : 'none',
+          WebkitMaskImage:
+            openedHeight > 0 && !opened
+              ? 'linear-gradient(to bottom, black 75%, transparent 100%)'
+              : 'none',
+        }"
+      >
         <h2><PrismicRichText :field="props.item.title" /></h2>
 
         <div class="text-container rich-text">
@@ -88,7 +102,6 @@ onMounted(() => {
             {{ props.item.link_label }} <ArrowLink />
           </PrismicLink>
         </div>
-        <div class="gradient-background" v-if="openedHeight > 0"></div>
       </div>
       <a
         href="#"
@@ -153,14 +166,6 @@ onMounted(() => {
       margin-bottom: 2.5rem;
     }
 
-    .gradient-background {
-      position: absolute;
-      width: 100%;
-      height: 33px;
-      background: linear-gradient(180deg, transparent 0%, #fff 30%);
-      bottom: 0;
-      margin-bottom: -5px;
-    }
   }
 
   .read-more {

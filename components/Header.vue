@@ -9,13 +9,18 @@
       <div class="row">
         <div class="offset-lg-1 col-lg-10 col-links">
           <nav class="menu">
-            <NuxtLink to="/" class="mini-logo" ref="miniLogoEl"
+            <NuxtLink
+              to="/"
+              class="mini-logo"
+              ref="miniLogoEl"
+              :class="{ dark: pageData.dark_header }"
               >Mini Logo<MiniLogo
             /></NuxtLink>
             <ul v-if="showNavLinks">
               <li
                 v-for="(menu, index) in headerLinks"
                 :key="`menu-item-${index}`"
+                :class="{ 'btn-item': menu.button }"
               >
                 <PrismicLink :field="menu.link">
                   {{ menu.label }}
@@ -124,7 +129,7 @@ const animateIn = () => {
       paddingBottom: isHomePage ? 120 : 0,
       ease: "power3.inOut",
       duration: 1,
-    }
+    },
   );
 
   let logoHeight = isHomePage ? "180px" : "90px";
@@ -183,8 +188,8 @@ const startScroll = () => {
             ? window.innerHeight * EXPANDED_SIZE - finRetractedSize
             : MIN_SIZE - finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   scrollAnimations.push(
@@ -201,8 +206,8 @@ const startScroll = () => {
           start: 0,
           end: window.innerHeight * EXPANDED_SIZE * 0.3 + finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   scrollAnimations.push(
@@ -219,8 +224,8 @@ const startScroll = () => {
           start: 0,
           end: window.innerHeight * EXPANDED_SIZE * 0.3 + finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   let logoHeight = isHomePage ? "180px" : "90px";
@@ -240,8 +245,8 @@ const startScroll = () => {
           start: 0,
           end: window.innerHeight * EXPANDED_SIZE + finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 
   scrollAnimations.push(
@@ -257,8 +262,8 @@ const startScroll = () => {
             ? window.innerHeight * EXPANDED_SIZE - finRetractedSize
             : MIN_SIZE - finRetractedSize,
         },
-      }
-    )
+      },
+    ),
   );
 };
 
@@ -323,7 +328,7 @@ watch(
     }
 
     toggleMiniLogo();
-  }
+  },
 );
 
 onMounted(() => {
@@ -369,7 +374,7 @@ onMounted(() => {
       ease: "power3.inOut",
       duration: 1,
       delay: 0.8,
-    }
+    },
   );
 
   if (!isHomePage) {
@@ -499,7 +504,7 @@ onMounted(() => {
           content: "";
           width: 100%;
           height: 2px;
-          background: $orange;
+          background: $red;
           position: absolute;
           bottom: -0.6rem;
           left: 0;
@@ -547,9 +552,9 @@ onMounted(() => {
     .headline {
       color: #1d1d1b !important;
     }
-    svg path {
+    /* svg path {
       fill: #1d1d1b !important;
-    }
+    } */
   }
 
   &:before {
@@ -615,7 +620,7 @@ onMounted(() => {
       position: relative;
       margin: 0 auto;
       path {
-        fill: #fff;
+        //fill: #fff;
         transition: fill 0.3s linear;
       }
     }
@@ -671,7 +676,7 @@ onMounted(() => {
     align-items: center;
     height: 60px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xxl) {
       height: 80px;
       position: relative;
       display: flex;
@@ -687,6 +692,15 @@ onMounted(() => {
         height: 40px;
         top: 5px;
         position: absolute;
+        path {
+          fill: #fff !important;
+        }
+      }
+
+      &.dark {
+        svg path {
+          fill: #1d1d1b !important;
+        }
       }
 
       @include media-breakpoint-up(md) {
@@ -704,6 +718,7 @@ onMounted(() => {
       padding: 0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-grow: 1;
       visibility: hidden;
 
@@ -731,7 +746,7 @@ onMounted(() => {
             content: "";
             width: 100%;
             height: 2px;
-            background: $orange;
+            background: $red;
             position: absolute;
             bottom: -0.6rem;
             left: 0;
@@ -750,6 +765,33 @@ onMounted(() => {
 
           &.router-link-active {
             pointer-events: none;
+          }
+        }
+
+        &.btn-item {
+          a {
+            display: inline-block;
+            padding: 0.8rem 2.4rem;
+            background: linear-gradient(
+              93.96deg,
+              #eb2426 3.37%,
+              #851416 107.34%
+            );
+            border: 1px solid #eb2426;
+            color: $white !important;
+            letter-spacing: 0.1em;
+
+            &:after {
+              display: none;
+            }
+
+            &:hover {
+              opacity: 0.88;
+            }
+
+            &.router-link-active {
+              pointer-events: auto;
+            }
           }
         }
       }
@@ -795,7 +837,7 @@ onMounted(() => {
 
   &.dark {
     span {
-      background: $orange;
+      background: $red;
     }
   }
 

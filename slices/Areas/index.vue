@@ -102,7 +102,7 @@ onMounted(() => {
     <div class="background" ref="imageEl" />
     <div class="container">
       <div class="row">
-        <div class="col-md-12 px-md-0">
+        <div class="offset-md-1 col-md-10 px-md-0">
           <h2>{{ slice.primary.title }}</h2>
           <div class="grid" ref="gridEl">
             <div
@@ -168,7 +168,6 @@ onMounted(() => {
       column-gap: 1.6rem;
       padding-top: 7.5rem;
       margin-top: 0;
-      flex-wrap: nowrap;
     }
 
     .grid-item {
@@ -180,7 +179,7 @@ onMounted(() => {
       min-width: 30%;
 
       @include media-breakpoint-up(md) {
-        min-width: 15.2%;
+        flex: 0 0 calc(33.333% - 1.067rem);
       }
 
       img {
@@ -198,6 +197,7 @@ onMounted(() => {
         text-align: center;
         margin-top: 2rem;
         z-index: 3;
+        white-space: pre-line;
       }
     }
   }

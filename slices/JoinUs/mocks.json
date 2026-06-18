@@ -23,6 +23,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "orange",
 				"type": "Select"
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "chair",
+				"type": "Text"
 			}
 		},
 		"items": [
